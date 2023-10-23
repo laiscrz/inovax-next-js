@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Rodape(){
 
     return(
@@ -9,7 +11,7 @@ export default function Rodape(){
             </section>
             <p className="text-center">&copy; 2023 Inova-X. Todos os direitos reservados.</p>
             <div className = 'selec-integrant'>
-                <Link></Link>
+                <Link href = {'/Integrantes'}>Integrantes</Link>
             </div>
         </footer>
     )
