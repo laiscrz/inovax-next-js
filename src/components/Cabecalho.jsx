@@ -4,8 +4,10 @@ import Link from "next/link";
 export default function Cabecalho() {
 
     return (
-        <header className='cabecalho-conteiner'>
-            <Image src={'/Image/logoinovax_bik.png'} alt="Logo Inovax" width={'120'} height={'120'} />
+        <div className='cabecalho-conteiner'>
+            <header>
+            <Image src={'/Image/logoinovax_bik.png'} alt="Logo Inovax" width={'120'} height={'120'} className="logo"/>
+            </header>
             <nav>
                 <div className='navegacao-links'>
                     <Link href={'/'}>Home</Link>
@@ -22,6 +24,8 @@ export default function Cabecalho() {
                     </button>
                 </Link>
             </div>
-        </header>
+        </div>
+        
+        
     )
 }
