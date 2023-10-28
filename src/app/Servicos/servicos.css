@@ -1,11 +1,24 @@
+/*Declaração de Variaveis*/
+:root{
+  --color-border: #1b1b1b;
+  --color-black: #202020;
+  --color-green-title: #74ba84;
+  --color-green-subtitle: #97e9aa;
+  --color-white: #fff;
+  --color-item-serv: #2d2d2d;
+  --color-border-item-serv: #3a3a3a;
+  --color-rgba-serv-item: rgba(0, 0, 0, 0.1);
+  --color-rgba-servicos: rgba(197, 77, 77, 0.1);
+}
+
 /* Estilização para os serviços */
 .servicos-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #202020;
-  border: 1px solid #1b1b1b;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px var(--color-rgba-servicos);
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -15,9 +28,9 @@
   & h1 {
     text-align: center;
     font-size: 28px;
-    background-color: #74ba84;
+    background-color: var(--color-green-title);
     border-radius: 60px;
-    color: white;
+    color: var(--color-white);
     width: 100%;
     margin-bottom: 20px;
   }
@@ -26,21 +39,21 @@
     flex: 0 0 calc(50% - 20px);
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #2d2d2d;
-    border: 1px solid #3a3a3a;
+    background-color: var(--color-item-serv);
+    border: 1px solid var(--color-border-item-serv);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--color-rgba-serv-item);
     box-sizing: border-box;
 
     & h3 {
       font-size: 16px;
       margin-bottom: 10px;
-      color: #84CF95;
+      color: var(--color-green-subtitle);
     }
 
     & p {
       font-size: 14px;
-      color: #f0f0f0;
+      color: var(--color-white);
     }
   }
 }
@@ -80,7 +93,7 @@
 
       & p {
         font-size: 14px;
-        color: #f0f0f0;
+        color: var(--color-white);
       }
 
       & img {
@@ -123,7 +136,6 @@
 
       & p {
         font-size: 15px;
-        color: #f0f0f0;
       }
 
       & img {
@@ -167,7 +179,6 @@
 
       & p {
         font-size: 17px;
-        color: #f0f0f0;
       }
 
       & img {
