@@ -15,8 +15,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-
+  text-decoration: none;
 }
+
 
 body {
   background-color: var(--color-black-body);
@@ -31,7 +32,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
+
 
 nav {
   margin-top: 10px;
@@ -49,9 +56,19 @@ nav a {
   margin-right: 20px;
 }
 
+.navegacao-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+ 
+
+
 nav .navegacao-links a:hover {
   background-color: var(--color-hover);
-  border-radius: 5px;
+  border-radius: 20px;
   color: var(--color-principal);
 }
 
@@ -74,24 +91,27 @@ main {
   width: 120px;
 }
 
+.acessar-login{
+  display: flex;
+}
+
 #btnLogin {
   background-color: var(--color-button);
   width: 150px;
   height: 40px;
   border: none;
   border-radius: 50px;
-  position: absolute;
-  top: 30px;
-  right: 40px;
   font-size: 1.0em;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1px 30px;
 }
 
 #btnLogin span {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
