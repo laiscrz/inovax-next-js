@@ -1,0 +1,208 @@
+/* Cadastro */
+.cadastro-conteiner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #202020;
+    border: 1px solid #1b1b1b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    & h1 {
+        text-align: center;
+        font-size: 28px;
+        color: #39ac6f;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        color: white;
+        text-align: center;
+    }
+
+    & .form-cadastro {
+        border: 1px solid white;
+        border-radius: 60px;
+        width: auto;
+        height: auto;
+        padding: 50px;
+
+        & form {
+            width: 700px;
+            margin: auto;
+            padding: auto;
+            display: inline-block;
+            text-align: center;
+
+            & label {
+                color: aliceblue;
+            }
+
+            & .form-group {
+                display: inline-block;
+
+                margin-bottom: 20px;
+            }
+
+            & input,
+            select {
+                margin-bottom: 10px;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-top: 5px;
+                width: 300px;
+                font-size: 16px;
+                background-color: gray;
+                border: 1px solid white;
+            }
+
+            & button {
+                background-color: #39ac6f;
+                color: #fff;
+                font-size: 18px;
+                border: none;
+                border-radius: 60px;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #338056;
+                }
+            }
+        }
+    }
+}
+
+/* dispositivos menores (por exemplo, Smartphones) */
+@media (max-width: 600px) {
+
+    .cadastro-conteiner {
+        max-width: 400px;
+
+        & h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        & h3 {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        & p {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .form-cadastro {
+            width: 100%;
+            padding: 10px;
+
+            & form {
+                width: 280px;
+
+                & input,
+                select {
+                    width: 100%;
+                    font-size: 13px;
+
+                }
+
+                & button {
+                    font-size: 13px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+}
+
+/* dispositivos medios (por exemplo, Tablets) */
+@media (max-width: 768px){
+    .cadastro-conteiner {
+        max-width: 550px;
+
+        & h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        & h3 {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        & p {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .form-cadastro {
+            width: 100%;
+            padding: 10px;
+
+            & form {
+                width: 400px;
+
+                & input,
+                select {
+                    width: 100%;
+                    font-size: 16px;
+
+                }
+
+                & button {
+                    font-size: 13px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+/* dispositivos grandes (por exemplo, Desktops) */
+@media (max-width: 992px) {
+    .cadastro-conteiner {
+        max-width: 650px;
+
+        & h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        & h3 {
+            font-size: 17px;
+            margin-top: 20px;
+        }
+
+        & p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-cadastro {
+            width: 100%;
+            padding: 10px;
+
+            & form {
+                width: 400px;
+
+                & input,
+                select {
+                    width: 100%;
+                    font-size: 17px;
+
+                }
+
+                & button {
+                    font-size: 15px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
