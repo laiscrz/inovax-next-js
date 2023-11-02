@@ -1,5 +1,5 @@
 import Image from "next/image";
-import 'src/app/SobreNos/sobreNos.css'
+import 'src/app/SobreNos/sobrenos.css'
 
 const sections = [
   {

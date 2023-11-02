@@ -14,7 +14,7 @@ const sections = [
     return (
       <main>
          <div className="elipse-superior">
-          <Image src={'/Image/comofunc_imageUm.jpg'} alt="Homem Analisando Bike" width={'120'} height={'120'}/>
+          <Image src={'/Image/comofunc_imageUm.jpg'} alt="Homem mexendo Bike" width={'175'} height={'140'}/>
          </div>
         <div className="comofunciona-container">
           <h1>Como Funciona</h1>
@@ -26,7 +26,7 @@ const sections = [
           ))}
         </div>
         <div className="elipse-inferior">
-          <Image src={'/Image/comofunc_imageDois.png'} alt="Homem Analisando Bike" width={'120'} height={'120'}/>
+          <Image src={'/Image/comofunc_imageDois.png'} alt="Homem Analisando Bike" width={'170'} height={'140'}/>
 
          </div>
       </main>
