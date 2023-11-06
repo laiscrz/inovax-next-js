@@ -5,8 +5,8 @@ export default function Cabecalho() {
 
     return (
         <header className='cabecalho-conteiner'>
-            <Image src={'/Image/logoinovax_bik.png'} alt="Logo Inovax" width={'120'} height={'120'} className="logo" />
-            <nav>
+            <img src="Image/logoinovax_bik.png" alt="Logo Inovax" className="logo"/>
+            <nav className="nav-menu">
                 <div className='navegacao-links'>
                     <Link href={'/'}>Home</Link>
                     <Link href={'/ComoFunciona'}>Como Funciona</Link>
