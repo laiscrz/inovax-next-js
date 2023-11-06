@@ -4,7 +4,7 @@
   --color-black-body: #161616;
   --color-black-conteudo: #000000;
   --color-white: #fff;
-  --color-hover: #ffffff55;
+  --color-hover-nav: #ffffff55;
   --color-button: #84CF95;
   --color-footer: #5db888;
 }
@@ -74,7 +74,7 @@ nav a {
 }
  
 nav .navegacao-links a:hover {
-  background-color: var(--color-hover);
+  background-color: var(--color-hover-nav);
   border-radius: 20px;
   color: var(--color-principal);
   opacity: 0.7;
