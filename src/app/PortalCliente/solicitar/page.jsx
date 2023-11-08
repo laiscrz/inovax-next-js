@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import '/src/app/PortalCliente/portalcliente.css'
 
-export default function SolicitarNovaVistoria() {
+
+export default function Solicitar() {
     const [formSolic, setFormSolic] = useState({
         nome: '',
         endereco: '',

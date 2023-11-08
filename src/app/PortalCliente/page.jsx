@@ -22,37 +22,37 @@ export default function PortalCliente() {
         {
             texto: "Acompanhar Vistorias em Andamento",
             imagemSrc: "/Image/icon_acompa.png",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/acompanhar'
         },
         {
             texto: "Ver Histórico de Vistorias de Bicicletas",
             imagemSrc: "/image/icon_hist.png",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/historico'
         },
         {
             texto: "Configurações da Conta",
             imagemSrc: "/image/icon_config.png",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/configuracoes'
         },
         {
             texto: "Suporte ao Cliente",
             imagemSrc: "/image/icon_suporte.jpg",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/suporte'
         },
         {
             texto: "FAQ (Perguntas Frequentes)",
             imagemSrc: "/image/icon_faq.jpg",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/faq'
         },
         {
             texto: "Feedback",
             imagemSrc: "/image/icon_feedback.jpg",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/PortalCliente/feedback'
         },
         {
             texto: "Sair da Conta",
             imagemSrc: "image/icon_sair.jpg",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/'
         },
 
     ];
@@ -66,7 +66,7 @@ export default function PortalCliente() {
                             key={index}
                             texto={option.texto}
                             imagemSrc={option.imagemSrc}
-                            caminho={option.caminho} // Certifique-se de incluir o caminho aqui
+                            caminho={option.caminho}
                         />
                     ))}
                 </div>
