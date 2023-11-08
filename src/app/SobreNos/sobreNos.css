@@ -1,4 +1,4 @@
-:root{
+:root {
   --color-border: #1b1b1b;
   --color-black: #202020;
   --color-green-principal: #39ac6f;
@@ -10,139 +10,139 @@
 
 /* Estilo para o conteúdo da página "Sobre Nós" */
 .sobrenos-conteiner {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px var(--color-rgba-box);
+  border-radius: 8px;
+
+  & h1 {
+    text-align: center;
+    font-size: 28px;
+    background-color: var(--color-green-title);
+    border-radius: 60px;
+    color: var(--color-white);
+    margin-bottom: 20px;
+  }
+
+  & h3 {
+    font-size: 20px;
+    color: var(--color-green-subtitle);
+    margin-top: 20px;
+  }
+
+  & p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-white);
+    margin-bottom: 20px;
+  }
+
+  & ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  & ul li {
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--color-white);
+  }
+}
+
+.elipse-lateral {
+  width: 295px;
+  height: 281px;
+  border-radius: 50%;
+  border: 2px solid var(--color-green-principal);
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  background: none;
+  z-index: -1;
+}
+
+.logoInov-faix {
+  text-align: center;
+}
+
+.logoInov-faix img {
+  width: 180px;
+  height: 140px;
+}
+
+/* dispositivos menores (por exemplo, Smartphones) */
+@media (max-width: 600px) {
+  .sobrenos-conteiner {
+    max-width: 400px;
     padding: 20px;
-    background-color: var(--color-black);
-    border: 1px solid var(--color-border);
-    box-shadow: 0 2px 6px var(--color-rgba-box);
-    border-radius: 8px;
-  
+    margin-top: 5px;
+
     & h1 {
-      text-align: center;
-      font-size: 28px;
-      background-color: var(--color-green-title);
-      border-radius: 60px;
-      color: var(--color-white);
+      font-size: 24px;
       margin-bottom: 20px;
     }
-  
+
     & h3 {
-      font-size: 20px;
-      color: var(--color-green-subtitle);
+      font-size: 15px;
       margin-top: 20px;
     }
-  
+
     & p {
-      font-size: 18px;
-      line-height: 1.5;
-      color: var(--color-white);
+      font-size: 13px;
       margin-bottom: 20px;
     }
-  
-    & ul {
-      list-style-type: disc;
-      margin-left: 20px;
+  }
+
+}
+
+/* dispositivos medios (por exemplo, Tablets) */
+@media (max-width: 768px) {
+  .sobrenos-conteiner {
+    max-width: 550px;
+    padding: 20px;
+    margin-top: 5px;
+
+    & h1 {
+      font-size: 25px;
       margin-bottom: 20px;
     }
-  
-    & ul li {
+
+    & h3 {
       font-size: 16px;
-      line-height: 1.4;
-      color: var(--color-white);
+      margin-top: 20px;
+    }
+
+    & p {
+      font-size: 14px;
+      margin-bottom: 20px;
     }
   }
-  
-  .elipse-lateral {
-    width: 295px;
-    height: 281px;
-    border-radius: 50%;
-    border: 2px solid var(--color-green-principal);
-    position: absolute;
-    top: 50%;
-    right: -100px;
-    background: none;
-    z-index: -1;
-  }
-  
-  .logoInov-faix {
-    text-align: center;
-  }
-  
-  .logoInov-faix img {
-    width: 180px;
-    height: 140px;
-  }
-  
-  /* dispositivos menores (por exemplo, Smartphones) */
-  @media (max-width: 600px) {
-    .sobrenos-conteiner {
-      max-width: 400px;
-      padding: 20px;
-      margin-top: 5px;
-  
-      & h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-    
-      & h3 {
-        font-size: 15px;
-        margin-top: 20px;
-      }
-    
-      & p {
-        font-size: 13px;
-        margin-bottom: 20px;
-      }
+}
+
+/* dispositivos grandes (por exemplo, Desktops) */
+@media (max-width: 992px) {
+  .sobrenos-conteiner {
+    max-width: 650px;
+    padding: 20px;
+    margin-top: 5px;
+
+    & h1 {
+      font-size: 27px;
+      margin-bottom: 20px;
     }
-  
-  }
-  
-  /* dispositivos medios (por exemplo, Tablets) */
-  @media (max-width: 768px){
-    .sobrenos-conteiner {
-      max-width: 550px;
-      padding: 20px;
-      margin-top: 5px;
-  
-      & h1 {
-        font-size: 25px;
-        margin-bottom: 20px;
-      }
-    
-      & h3 {
-        font-size: 16px;
-        margin-top: 20px;
-      }
-    
-      & p {
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
+
+    & h3 {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    & p {
+      font-size: 15px;
+      margin-bottom: 20px;
     }
   }
-  
-  /* dispositivos grandes (por exemplo, Desktops) */
-  @media (max-width: 992px) {
-    .sobrenos-conteiner {
-      max-width: 650px;
-      padding: 20px;
-      margin-top: 5px;
-  
-      & h1 {
-        font-size: 27px;
-        margin-bottom: 20px;
-      }
-    
-      & h3 {
-        font-size: 18px;
-        margin-top: 20px;
-      }
-    
-      & p {
-        font-size: 15px;
-        margin-bottom: 20px;
-      }
-    }
-  }
+}
