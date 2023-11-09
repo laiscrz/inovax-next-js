@@ -1,63 +1,62 @@
+"use client"
 import Link from "next/link";
 import '/src/app/PortalCliente/portalcliente.css'
+import { useEffect, useState } from "react";
 
 
 export default function Acompanhar() {
-    const acompanhamentoVistoria = [
-        {
-            id: 1,
-            data: '2023-09-10',
-            status: 'Em Andamento',
-            resultado: 'Sem problemas detectados',
-            detalhes: 'Informações Adicionais.',
-        },
-        {
-            id: 2,
-            data: '2023-09-05',
-            status: 'Em Andamento',
-            resultado: 'Leve desgaste no pneu traseiro',
-            detalhes: 'Informações Adicionais.',
-        },
-        {
-            id: 3,
-            data: '2023-08-28',
-            status: 'Em Andamento',
-            resultado: 'Nenhum problema encontrado',
-            detalhes: 'Informações Adicionais.',
-        },
-    ];
+    const [inspencao,setInspencao] = useState([])
 
+    useEffect(()=>{
+        fetch(`http://localhost:5000/inspencao`)
+        .then(resp=> resp.json())
+        .then(resp=> setInspencao(resp))
+        .catch(error=> console.error(error))
+      },[])
 
+      const handleDelete = (id)=>{
+        fetch(`http://localhost:5000/inspencao/${id}`, {
+          method:'DELETE'
+        })
+        .then(window.location = '/')
+        .catch(error=> console.error(error))
+      }
 
     return (
         <main>
             <div className="portalclie-conteiner">
                 <div className='acompanhar-vist'>
-                    <h2>Acompanhar Vistorias Automatizadas</h2>
+                    <h2>Acompanhar Vistorias Automatizadas - Inspenções</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                                <th>Resultado</th>
+                                <th>Codigo de Serie</th>
+                                <th>Analise</th>
+                                <th>Custo</th>
+                                <th>Data da Inspenção</th>
+                                <th>Quantidade de Inspenção</th>
+                                <th>Fiscalização</th>
                                 <th>Detalhes</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {acompanhamentoVistoria.map((vistoria) => (
-                                <tr key={vistoria.id}>
-                                    <td>{vistoria.id}</td>
-                                    <td>{vistoria.data}</td>
-                                    <td>{vistoria.status}</td>
-                                    <td>{vistoria.resultado}</td>
+                            {
+                            inspencao.map((acompanhar,id) => (
+                                <tr key={acompanhar.id}>
+                                    <td>{acompanhar.codSerie}</td>
+                                    <td>{acompanhar.analise}</td>
+                                    <td>{acompanhar.custo}</td>
+                                    <td>{acompanhar.dataInspencao}</td>
+                                    <td>{acompanhar.quantidadeInspencao}</td>
+                                    <td>{acompanhar.fiscalizacao}</td>
                                     <td>
                                         <button className="ver-detalhes">
                                             Ver Detalhes
                                         </button>
                                     </td>
                                 </tr>
-                            ))}
+                            ))
+                        }
                         </tbody>
                     </table>
                     <div className="button-container">

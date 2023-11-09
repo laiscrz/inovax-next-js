@@ -40,8 +40,36 @@
       "custo": 50.9,
       "dataInspencao": "20-08-2012",
       "quantidadeInspencao": 2,
-      "ficalizacao": "Em andamento"
+      "fiscalizacao": "Em andamento"
+    },
+    {
+      "id": 2,
+      "codSerie": "S2345",
+      "analise": "Análise da bicicleta com desgaste no freio",
+      "custo": 40.5,
+      "dataInspencao": "15-07-2015",
+      "quantidadeInspencao": 1,
+      "fiscalizacao": "Concluída"
+    },
+    {
+      "id": 3,
+      "codSerie": "S3456",
+      "analise": "Análise da bicicleta com pneu furado",
+      "custo": 30.0,
+      "dataInspencao": "02-04-2018",
+      "quantidadeInspencao": 3,
+      "fiscalizacao": "Em andamento"
+    },
+    {
+      "id": 4,
+      "codSerie": "S4567",
+      "analise": "Análise da bicicleta com corrente solta",
+      "custo": 55.2,
+      "dataInspencao": "08-11-2021",
+      "quantidadeInspencao": 1,
+      "fiscalizacao": "Concluída"
     }
+    
   ],
   "diagnostico": [
     {
