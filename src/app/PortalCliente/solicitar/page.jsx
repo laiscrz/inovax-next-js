@@ -4,20 +4,47 @@ import Link from "next/link";
 import { useState } from "react";
 import '/src/app/PortalCliente/portalcliente.css'
 
-
 export default function Solicitar() {
     const [formSolic, setFormSolic] = useState({
-        nome: '',
-        endereco: '',
         numeroSerie: '',
-        modelo: '',
-        marca: '',
+        anoCompra: '',
         cor: '',
-        anoFabricacao: ''
-    })
+        modelo: '',
+    });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Convertendo o ano de compra para número
+        const formSolicToSend = {
+            ...formSolic,
+            anoCompra: parseInt(formSolic.anoCompra, 10),
+        };
+
+        try {
+            const response = await fetch("http://localhost:5000/bike", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formSolicToSend),
+            });
+
+            if (response.ok) {
+                console.log("Solicitação enviada com sucesso!");
+                
+                setFormSolic({
+                    numeroSerie: '',
+                    anoCompra: '',
+                    cor: '',
+                    modelo: '',
+                });
+                
+                window.alert("Solicitação enviada com sucesso!");
+            } else {
+                console.error("Falha ao enviar solicitação.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     const handleChange = (e) => {
@@ -41,30 +68,8 @@ export default function Solicitar() {
             <div className="portalclie-conteiner">
                 <div className='solic-vist'>
                     <br />
-                    <h2>Solicitar Nova Vistoria</h2>
+                    <h2>Solicitar Nova Vistoria - Dados da Bike</h2>
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="nome">Nome:</label><br />
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                value={formSolic.nome}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="endereco">Endereço:</label><br />
-                            <input
-                                type="text"
-                                id="endereco"
-                                name="endereco"
-                                value={formSolic.endereco}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
                         <div className="form-group">
                             <label htmlFor="numeroSerie">Número de Série da Bicicleta:</label><br />
                             <input
@@ -77,23 +82,12 @@ export default function Solicitar() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="modelo">Modelo da Bicicleta:</label><br />
+                            <label htmlFor="anoCompra">Ano de Compra da Bicicleta:</label><br />
                             <input
-                                type="text"
-                                id="modelo"
-                                name="modelo"
-                                value={formSolic.modelo}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="marca">Marca da Bicicleta:</label><br />
-                            <input
-                                type="text"
-                                id="marca"
-                                name="marca"
-                                value={formSolic.marca}
+                                type="number"
+                                id="anoCompra"
+                                name="anoCompra"
+                                value={formSolic.anoCompra}
                                 onChange={handleChange}
                                 required
                             />
@@ -110,12 +104,12 @@ export default function Solicitar() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="anoFabricacao">Ano de Fabricação da Bicicleta:</label><br />
+                            <label htmlFor="modelo">Modelo da Bicicleta:</label><br />
                             <input
                                 type="text"
-                                id="anoFabricacao"
-                                name="anoFabricacao"
-                                value={formSolic.anoFabricacao}
+                                id="modelo"
+                                name="modelo"
+                                value={formSolic.modelo}
                                 onChange={handleChange}
                                 required
                             />

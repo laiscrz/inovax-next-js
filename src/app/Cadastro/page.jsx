@@ -3,7 +3,6 @@ import Next, { useState } from 'react';
 import '/src/app/Cadastro/cadastro.css';
 export default function Cadastro({params}) {
 
-    const userId = params.id == 0 ? '' : params.id
 
 
     const [clientes, setClientes] = useState([]);
@@ -13,13 +12,15 @@ export default function Cadastro({params}) {
         telefone: '',
         endereco: '',
         cpf: '',
-        dataNascimento: '',
+        anoNascimento: '',
         senha: '',
     });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setCliente({ ...cliente, [name]: value });
+        const parsedValue = name === 'anoNascimento' ? parseInt(value, 10) : value;
+    
+        setCliente({ ...cliente, [name]: parsedValue });
     };
 
     const handleSubmit = async (e) => {
@@ -45,10 +46,12 @@ export default function Cadastro({params}) {
                     endereco: "",
                     cpf: "",
                     senha: "",
+                    anoNascimento: '',
                     sexo: "",
                 });
     
                 
+                window.alert("Solicitação enviada com sucesso!");
                 window.location.href = "/PortalCliente";
             } else {
                 console.error("Falha ao add cliente.");
@@ -120,11 +123,22 @@ export default function Cadastro({params}) {
                             />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="anoNascimento">Ano de Nascimento: </label><br />
+                            <input
+                                type="number"
+                                id="anoNascimento"
+                                name="anoNascimento"
+                                value={cliente.anoNascimento}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="sexo">Sexo: </label><br />
                             <input
                                 type="text"
                                 id="sexo"
-                                name="sex"
+                                name="sexo"
                                 value={cliente.sexo}
                                 onChange={handleInputChange}
                                 required

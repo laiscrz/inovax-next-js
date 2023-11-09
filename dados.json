@@ -1,33 +1,34 @@
 {
   "cliente": [
     {
-      "id": 1,
-      "cpf": "125.452.452-12",
-      "telefone": "11952478627",
-      "email": "jose@gmail.com",
-      "endereco": "av. paulista",
-      "nome": "jose",
+      "nome": "João",
+      "email": "joao@gmail.com",
+      "telefone": "11978451256",
+      "endereco": "avenida general",
+      "cpf": "124.563.785-32",
+      "anoNascimento": 2023,
+      "senha": "12345",
       "sexo": "Masculino",
-      "senha": "123456"
+      "id": 1
     }
   ],
   "bike": [
     {
-      "id": 1,
-      "numSerie": "XC05958",
-      "anoCompra": 2023,
-      "cor": "verde",
-      "modelo": "caloi"
+      "numeroSerie": "X25845",
+      "anoCompra": 2004,
+      "cor": "Vermelha",
+      "modelo": "City",
+      "id": 1
     }
   ],
   "seguro": [
     {
       "id": 1,
       "codSeguro": "S4598",
-      "dataContratacao": "12/10/2023",
-      "clasulas": "clasula10",
+      "dataContratacao": "12-10-2023",
+      "clasulas": "clasula 10",
       "pagamento": "boleto",
-      "valorSeguro": 100.50,
+      "valorSeguro": 100.5,
       "numSerie": "XC1568"
     }
   ],
@@ -35,32 +36,30 @@
     {
       "id": 1,
       "codSerie": "S1215",
-      "analise": "em andamento",
-      "custo": 20.9,
-      "dataInspencao": "20/08/2012",
+      "analise": "Análise da bicicleta em bom estado",
+      "custo": 50.9,
+      "dataInspencao": "20-08-2012",
       "quantidadeInspencao": 2,
-      "ficalizacao": "XC1568"
+      "ficalizacao": "Em andamento"
     }
   ],
   "diagnostico": [
     {
       "id": 1,
-      "registroAvaria": "S1215",
-      "estadoGeral": "em andamento",
-      "danos": "",
-      "idSinistro": "SI14551",
-      "quantidadeInspencao": 2,
-      "fiscalizacao": "XC1568"
+      "registroAvaria": "Avaria na roda traseira",
+      "estadoGeral": "Bom estado geral",
+      "danos": "com exceção da roda traseira danificada",
+      "idSinistro": "SEN143"
     }
   ],
   "sinistro": [
     {
       "id": 1,
-      "idSinistro": "SI14551",
-      "roubo": "sim",
-      "quebra": "",
-      "gravidade": 2,
-      "valorManutencao": "XC1568"
+      "idSinistro": "SIEN143",
+      "roubo": "Não houve roubo",
+      "quebra": "Pneu estorou",
+      "gravidade": "Grave",
+      "valorManutencao": 100.52
     }
   ]
 }
