@@ -1,7 +1,11 @@
 "use client"
 import Next, { useState } from 'react';
 import '/src/app/Cadastro/cadastro.css';
-export default function Cadastro() {
+export default function Cadastro({params}) {
+
+    const userId = params.id == 0 ? '' : params.id
+
+
     const [clientes, setClientes] = useState([]);
     const [cliente, setCliente] = useState({
         nome: '',
@@ -18,34 +22,41 @@ export default function Cadastro() {
         setCliente({ ...cliente, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const dataNascimento = new Date(cliente.dataNascimento);
-        const hoje = new Date();
-        const idade = hoje.getFullYear() - dataNascimento.getFullYear();
-
-        if (idade < 18) {
-            alert('Você não pode se cadastrar, pois não tem idade suficiente.');
-            return;
-        }
-
+    
+        
         setClientes([...clientes, cliente]);
-
-        setCliente({
-            nome: '',
-            email: '',
-            telefone: '',
-            endereco: '',
-            cpf: '',
-            dataNascimento: '',
-            senha: '',
-        });
-
-        // Redirecionar apenas se os dados estiverem corretos
-        window.location.href = "/PortalCliente";
+    
+        
+        try {
+            const response = await fetch("http://localhost:5000/cliente/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(cliente),
+            });
+    
+            if (response.ok) {
+                console.log("Cliente add com sucesso!");
+                setCliente({
+                    nome: "",
+                    email: "",
+                    telefone: "",
+                    endereco: "",
+                    cpf: "",
+                    senha: "",
+                    sexo: "",
+                });
+    
+                
+                window.location.href = "/PortalCliente";
+            } else {
+                console.error("Falha ao add cliente.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
-
     return (
         <main className="cadastro">
             <div className="cadastro-conteiner">
@@ -109,12 +120,12 @@ export default function Cadastro() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="dataNascimento">Data de Nascimento:</label><br />
+                            <label htmlFor="sexo">Sexo: </label><br />
                             <input
-                                type="date"
-                                id="dataNascimento"
-                                name="dataNascimento"
-                                value={cliente.dataNascimento}
+                                type="text"
+                                id="sexo"
+                                name="sex"
+                                value={cliente.sexo}
                                 onChange={handleInputChange}
                                 required
                             />

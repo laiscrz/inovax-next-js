@@ -1,0 +1,66 @@
+{
+  "cliente": [
+    {
+      "id": 1,
+      "cpf": "125.452.452-12",
+      "telefone": "11952478627",
+      "email": "jose@gmail.com",
+      "endereco": "av. paulista",
+      "nome": "jose",
+      "sexo": "Masculino",
+      "senha": "123456"
+    }
+  ],
+  "bike": [
+    {
+      "id": 1,
+      "numSerie": "XC05958",
+      "anoCompra": 2023,
+      "cor": "verde",
+      "modelo": "caloi"
+    }
+  ],
+  "seguro": [
+    {
+      "id": 1,
+      "codSeguro": "S4598",
+      "dataContratacao": "12/10/2023",
+      "clasulas": "clasula10",
+      "pagamento": "boleto",
+      "valorSeguro": 100.50,
+      "numSerie": "XC1568"
+    }
+  ],
+  "inspencao": [
+    {
+      "id": 1,
+      "codSerie": "S1215",
+      "analise": "em andamento",
+      "custo": 20.9,
+      "dataInspencao": "20/08/2012",
+      "quantidadeInspencao": 2,
+      "ficalizacao": "XC1568"
+    }
+  ],
+  "diagnostico": [
+    {
+      "id": 1,
+      "registroAvaria": "S1215",
+      "estadoGeral": "em andamento",
+      "danos": "",
+      "idSinistro": "SI14551",
+      "quantidadeInspencao": 2,
+      "fiscalizacao": "XC1568"
+    }
+  ],
+  "sinistro": [
+    {
+      "id": 1,
+      "idSinistro": "SI14551",
+      "roubo": "sim",
+      "quebra": "",
+      "gravidade": 2,
+      "valorManutencao": "XC1568"
+    }
+  ]
+}
