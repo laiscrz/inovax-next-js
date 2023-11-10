@@ -19,7 +19,22 @@
       "cor": "Vermelha",
       "modelo": "city",
       "id": 1
+    },
+    {
+      "numSerie": "Y78901",
+      "anoCompra": 2010,
+      "cor": "Azul",
+      "modelo": "mountain",
+      "id": 2
+    },
+    {
+      "numSerie": "Z12345",
+      "anoCompra": 2018,
+      "cor": "Verde",
+      "modelo": "road",
+      "id": 3
     }
+        
   ],
   "seguro": [
     {

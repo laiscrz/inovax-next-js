@@ -2,20 +2,20 @@
 import Link from "next/link";
 import '/src/app/PortalCliente/portalcliente.css'
 import { useEffect, useState } from "react";
-import { FaTimesCircle} from "react-icons/fa"
+import { FaTimesCircle, FaEdit } from "react-icons/fa"
 
-export default function Acompanhar() {
-    const [inspencao, setInspencao] = useState([])
+export default function Visualizar() {
+    const [bike, setBike] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inspencao`)
+        fetch(`http://localhost:5000/bike`)
             .then(resp => resp.json())
-            .then(resp => setInspencao(resp))
+            .then(resp => setBike(resp))
             .catch(error => console.error(error))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/inspencao/${id}`, {
+        fetch(`http://localhost:5000/bike/${id}`, {
             method: 'DELETE'
         })
             .then(window.location = '/')
@@ -26,32 +26,33 @@ export default function Acompanhar() {
         <main>
             <div className="portalclie-conteiner">
                 <div className='acompanhar-vist'>
-                    <h2>Acompanhar Vistorias Automatizadas - Inspenções</h2>
+                    <h2>Visualizar Bikes cadastradas - Bikes</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Codigo de Serie</th>
-                                <th>Analise</th>
-                                <th>Custo</th>
-                                <th>Data da Inspenção</th>
-                                <th>Quantidade de Inspenção</th>
-                                <th>Fiscalização</th>
+                                <th>Número de serie</th>
+                                <th>Ano da Compra</th>
+                                <th>Cor</th>
+                                <th>Modelo</th>
                                 <th>Opções</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                inspencao.map((acompanhar) => (
-                                    <tr key={acompanhar.id}>
-                                        <td>{acompanhar.codigoSerie}</td>
-                                        <td>{acompanhar.analise}</td>
-                                        <td>{acompanhar.custo}</td>
-                                        <td>{acompanhar.dataInspencao}</td>
-                                        <td>{acompanhar.qtdInspencao}</td>
-                                        <td>{acompanhar.fiscalizacao}</td>
+                                bike.map((visualizar) => (
+                                    <tr key={visualizar.id}>
+                                        <td>{visualizar.numSerie}</td>
+                                        <td>{visualizar.anoCompra}</td>
+                                        <td>{visualizar.cor}</td>
+                                        <td>{visualizar.modelo}</td>
                                         <td>
-                                            <button onClick={handleDelete.bind(this, acompanhar.id)} className="ver-detalhes">
-                                                <FaTimesCircle /> Cancelar
+                                            <Link href={`/PortalCliente/visualizar/editarDados/${visualizar.id}`}>
+                                                <button className="ver-detalhes">
+                                                    <FaEdit /> Editar
+                                                </button>
+                                            </Link>
+                                            <button onClick={handleDelete.bind(this, visualizar.id)} className="ver-detalhes">
+                                                <FaTimesCircle /> Exluir
                                             </button>
                                         </td>
                                     </tr>

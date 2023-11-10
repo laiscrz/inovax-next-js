@@ -30,6 +30,11 @@ export default function PortalCliente() {
             caminho: '/PortalCliente/historico'
         },
         {
+            texto: "Visualizar Bicicletas Cadastradas",
+            imagemSrc: "/Image/icon_visualizarbike.png",
+            caminho: '/PortalCliente/visualizar'
+        },
+        {
             texto: "Configurações da Conta",
             imagemSrc: "/image/icon_config.png",
             caminho: '/PortalCliente/configuracoes'
@@ -43,11 +48,6 @@ export default function PortalCliente() {
             texto: "FAQ (Perguntas Frequentes)",
             imagemSrc: "/image/icon_faq.jpg",
             caminho: '/PortalCliente/faq'
-        },
-        {
-            texto: "Feedback",
-            imagemSrc: "/image/icon_feedback.jpg",
-            caminho: '/PortalCliente/feedback'
         },
         {
             texto: "Sair da Conta",
