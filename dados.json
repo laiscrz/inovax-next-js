@@ -14,17 +14,17 @@
   ],
   "bike": [
     {
-      "numeroSerie": "X25845",
+      "numSerie": "X25845",
       "anoCompra": 2004,
       "cor": "Vermelha",
-      "modelo": "City",
+      "modelo": "city",
       "id": 1
     }
   ],
   "seguro": [
     {
       "id": 1,
-      "codSeguro": "S4598",
+      "codigoSeguro": "S4598",
       "dataContratacao": "12-10-2023",
       "clasulas": "clasula 10",
       "pagamento": "boleto",
@@ -35,38 +35,38 @@
   "inspencao": [
     {
       "id": 1,
-      "codSerie": "S1215",
+      "codigoSerie": "S1215",
       "analise": "Análise da bicicleta em bom estado",
       "custo": 50.9,
       "dataInspencao": "20-08-2012",
-      "quantidadeInspencao": 2,
+      "qtdInspencao": 2,
       "fiscalizacao": "Em andamento"
     },
     {
       "id": 2,
-      "codSerie": "S2345",
+      "codigoSerie": "S2345",
       "analise": "Análise da bicicleta com desgaste no freio",
       "custo": 40.5,
       "dataInspencao": "15-07-2015",
-      "quantidadeInspencao": 1,
+      "qtdInspencao": 1,
       "fiscalizacao": "Concluída"
     },
     {
       "id": 3,
-      "codSerie": "S3456",
+      "codigoSerie": "S3456",
       "analise": "Análise da bicicleta com pneu furado",
-      "custo": 30,
+      "custo": 30.4,
       "dataInspencao": "02-04-2018",
-      "quantidadeInspencao": 3,
+      "qtdInspencao": 3,
       "fiscalizacao": "Em andamento"
     },
     {
       "id": 4,
-      "codSerie": "S4567",
+      "codigoSerie": "S4567",
       "analise": "Análise da bicicleta com corrente solta",
       "custo": 55.2,
       "dataInspencao": "08-11-2021",
-      "quantidadeInspencao": 1,
+      "qtdInspencao": 1,
       "fiscalizacao": "Concluída"
     }
   ],
@@ -77,6 +77,27 @@
       "estadoGeral": "Bom estado geral",
       "danos": "com exceção da roda traseira danificada",
       "idSinistro": "SEN143"
+    },
+    {
+      "id": 2,
+      "registroAvaria": "Guidão torto",
+      "estadoGeral": "Regular estado geral",
+      "danos": "guidão ligeiramente torto, necessita de alinhamento",
+      "idSinistro": "SEN149"
+    },
+    {
+      "id": 3,
+      "registroAvaria": "Vidro dianteiro quebrado",
+      "estadoGeral": "Estado geral comprometido",
+      "danos": "vidro dianteiro totalmente danificado",
+      "idSinistro": "SEN145"
+    },
+    {
+      "id": 4,
+      "registroAvaria": "Corrente solta",
+      "estadoGeral": "Regular estado geral",
+      "danos": "corrente solta, necessita de ajuste",
+      "idSinistro": "SEN147"
     }
   ],
   "sinistro": [

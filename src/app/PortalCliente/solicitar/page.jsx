@@ -6,7 +6,7 @@ import '/src/app/PortalCliente/portalcliente.css'
 
 export default function Solicitar() {
     const [formSolic, setFormSolic] = useState({
-        numeroSerie: '',
+        numSerie: '',
         anoCompra: '',
         cor: '',
         modelo: '',
@@ -32,7 +32,7 @@ export default function Solicitar() {
                 console.log("Solicitação enviada com sucesso!");
                 
                 setFormSolic({
-                    numeroSerie: '',
+                    numSerie: '',
                     anoCompra: '',
                     cor: '',
                     modelo: '',
@@ -71,12 +71,12 @@ export default function Solicitar() {
                     <h2>Solicitar Nova Vistoria - Dados da Bike</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="numeroSerie">Número de Série da Bicicleta:</label><br />
+                            <label htmlFor="numSerie">Número de Série da Bicicleta:</label><br />
                             <input
                                 type="text"
-                                id="numeroSerie"
-                                name="numeroSerie"
-                                value={formSolic.numeroSerie}
+                                id="numSerie"
+                                name="numSerie"
+                                value={formSolic.numSerie}
                                 onChange={handleChange}
                                 required
                             />

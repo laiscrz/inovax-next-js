@@ -25,27 +25,26 @@ export default function Historico() {
         <main>
             <div className="portalclie-conteiner">
                 <div className='histo-vist'>
-                    <h2>Ver Histórico de Vistorias de Bicicletas</h2>
+                    <h2>Histórico de Vistorias de Bicicletas - Diagnosticos</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>ID do Sinistro</th>
                                 <th>Registro da Avaria</th>
                                 <th>Estado Geral</th>
                                 <th>Danos</th>
-                                <th>ID do Sinistro</th>
                                 <th>Mais Informações</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                             diagnostico.map((historico) => (
+                                
                                 <tr key={historico.id}>
-                                    <td>{historico.id}</td>
+                                    <td>{historico.idSinistro}</td>
                                     <td>{historico.registroAvaria}</td>
                                     <td>{historico.estadoGeral}</td>
                                     <td>{historico.danos}</td>
-                                    <td>{historico.idSinistro}</td>
                                     <td>
                                         <button
                                             className="ver-diagnostico"

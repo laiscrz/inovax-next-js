@@ -2,7 +2,7 @@
 import Link from "next/link";
 import '/src/app/PortalCliente/portalcliente.css'
 import { useEffect, useState } from "react";
-
+import { FaTimesCircle, FaEdit } from "react-icons/fa"
 
 export default function Acompanhar() {
     const [inspencao,setInspencao] = useState([])
@@ -36,22 +36,25 @@ export default function Acompanhar() {
                                 <th>Data da Inspenção</th>
                                 <th>Quantidade de Inspenção</th>
                                 <th>Fiscalização</th>
-                                <th>Detalhes</th>
+                                <th>Opções</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                             inspencao.map((acompanhar) => (
                                 <tr key={acompanhar.id}>
-                                    <td>{acompanhar.codSerie}</td>
+                                    <td>{acompanhar.codigoSerie}</td>
                                     <td>{acompanhar.analise}</td>
                                     <td>{acompanhar.custo}</td>
                                     <td>{acompanhar.dataInspencao}</td>
-                                    <td>{acompanhar.quantidadeInspencao}</td>
+                                    <td>{acompanhar.qtdInspencao}</td>
                                     <td>{acompanhar.fiscalizacao}</td>
                                     <td>
                                         <button className="ver-detalhes">
-                                            Ver Detalhes
+                                            <FaEdit/> Editar
+                                        </button>
+                                        <button onClick={handleDelete.bind(this, acompanhar.id)} className="ver-detalhes">
+                                            <FaTimesCircle/> Cancelar
                                         </button>
                                     </td>
                                 </tr>
