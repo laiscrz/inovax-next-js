@@ -6,7 +6,7 @@
       "telefone": "11978451256",
       "endereco": "avenida general",
       "cpf": "124.563.785-32",
-      "anoNascimento": 2023,
+      "anoNasc": 2023,
       "senha": "12345",
       "sexo": "Masculino",
       "id": 1
@@ -55,7 +55,7 @@
       "id": 3,
       "codSerie": "S3456",
       "analise": "Análise da bicicleta com pneu furado",
-      "custo": 30.0,
+      "custo": 30,
       "dataInspencao": "02-04-2018",
       "quantidadeInspencao": 3,
       "fiscalizacao": "Em andamento"
@@ -69,7 +69,6 @@
       "quantidadeInspencao": 1,
       "fiscalizacao": "Concluída"
     }
-    
   ],
   "diagnostico": [
     {

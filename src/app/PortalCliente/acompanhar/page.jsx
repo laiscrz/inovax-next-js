@@ -41,7 +41,7 @@ export default function Acompanhar() {
                         </thead>
                         <tbody>
                             {
-                            inspencao.map((acompanhar,id) => (
+                            inspencao.map((acompanhar) => (
                                 <tr key={acompanhar.id}>
                                     <td>{acompanhar.codSerie}</td>
                                     <td>{acompanhar.analise}</td>

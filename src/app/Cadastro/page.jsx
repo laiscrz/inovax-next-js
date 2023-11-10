@@ -5,61 +5,49 @@ export default function Cadastro({params}) {
 
 
 
-    const [clientes, setClientes] = useState([]);
-    const [cliente, setCliente] = useState({
-        nome: '',
-        email: '',
-        telefone: '',
-        endereco: '',
-        cpf: '',
-        anoNascimento: '',
-        senha: '',
-    });
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        const parsedValue = name === 'anoNascimento' ? parseInt(value, 10) : value;
+        const [clientes, setClientes] = useState([]);
+        const [cliente, setCliente] = useState({
+            nome: '',
+            cpf: '',
+            endereco: '',
+            telefone: '',
+            sexo: '',
+            email: '',
+            anoNasc: '',
+            senha: '',
+        });
     
-        setCliente({ ...cliente, [name]: parsedValue });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+        const handleInputChange = (e) => {
+            const { name, value } = e.target;
+            const parsedValue = name === 'anoNasc' ? parseInt(value, 10) : value;
     
+            setCliente({ ...cliente, [name]: parsedValue });
+        };
+    
+        const handleSubmit = async (e) => {
+            e.preventDefault();
         
-        setClientes([...clientes, cliente]);
-    
+            setClientes([...clientes, cliente]);
         
-        try {
-            const response = await fetch("http://localhost:5000/cliente/", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(cliente),
-            });
-    
-            if (response.ok) {
-                console.log("Cliente add com sucesso!");
-                setCliente({
-                    nome: "",
-                    email: "",
-                    telefone: "",
-                    endereco: "",
-                    cpf: "",
-                    senha: "",
-                    anoNascimento: '',
-                    sexo: "",
+            try {
+                const response = await fetch("http://localhost:8080/SprintJavaPorto/api/cliente/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(cliente),
                 });
-    
-                
-                window.alert("Solicitação enviada com sucesso!");
-                window.location.href = "/PortalCliente";
-            } else {
-                console.error("Falha ao add cliente.");
+        
+                if (response.ok) {
+                    console.log("Cliente adicionado com sucesso!");
+                    // Restante do código...
+                } else {
+                    console.error("Falha ao adicionar cliente.");
+                }
+            } catch (error) {
+                console.error("Erro na resposta do servidor:", error);
             }
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    };
+        };
+        
+        
     return (
         <main className="cadastro">
             <div className="cadastro-conteiner">
@@ -123,12 +111,12 @@ export default function Cadastro({params}) {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="anoNascimento">Ano de Nascimento: </label><br />
+                            <label htmlFor="anoNasc">Ano de Nascimento: </label><br />
                             <input
                                 type="number"
-                                id="anoNascimento"
-                                name="anoNascimento"
-                                value={cliente.anoNascimento}
+                                id="anoNasc"
+                                name="anoNasc"
+                                value={cliente.anoNasc}
                                 onChange={handleInputChange}
                                 required
                             />
@@ -156,7 +144,7 @@ export default function Cadastro({params}) {
                             />
                         </div><br />
                         <span>
-                            <button type="submit">Cadastrar</button>
+                            <button type="submit" >Cadastrar</button>
                         </span>
                     </form>
                 </div>

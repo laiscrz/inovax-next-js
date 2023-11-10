@@ -67,7 +67,7 @@ export default function Login() {
               </ul>
             </form>
           </div>
-          <img src="/Image/login.png" width="300" height="300" class="margin-left-50" />
+          <img src="/Image/login.png" width="300" height="300" className="margin-left-50" />
         </div>
       </div>
         </main>

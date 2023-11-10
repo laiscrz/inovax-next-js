@@ -1,30 +1,25 @@
+"use client"
 import Link from "next/link";
 import '/src/app/PortalCliente/portalcliente.css'
+import { useEffect, useState } from "react";
 
 export default function Historico() {
-    const historicoVistoria = [
-        {
-            id: 1,
-            data: '2023-09-10',
-            status: 'Concluída',
-            resultado: 'Sem problemas detectados',
-            detalhes: 'pdf_diagnostico1',
-        },
-        {
-            id: 2,
-            data: '2023-09-05',
-            status: 'Concluída',
-            resultado: 'Leve desgaste no pneu traseiro',
-            detalhes: 'pdf_diagnostico2',
-        },
-        {
-            id: 3,
-            data: '2023-08-28',
-            status: 'Concluída',
-            resultado: 'Nenhum problema encontrado',
-            detalhes: 'pdf_diagnostico3',
-        },
-    ];
+    const [diagnostico,setDiagnostico] = useState([])
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/diagnostico`)
+        .then(resp=> resp.json())
+        .then(resp=> setDiagnostico(resp))
+        .catch(error=> console.error(error))
+      },[])
+
+      const handleDelete = (id)=>{
+        fetch(`http://localhost:5000/diagnostico/${id}`, {
+          method:'DELETE'
+        })
+        .then(window.location = '/')
+        .catch(error=> console.error(error))
+      }
 
     return (
         <main>
@@ -35,19 +30,22 @@ export default function Historico() {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                                <th>Resultado</th>
+                                <th>Registro da Avaria</th>
+                                <th>Estado Geral</th>
+                                <th>Danos</th>
+                                <th>ID do Sinistro</th>
                                 <th>Mais Informações</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {historicoVistoria.map((vistoria) => (
-                                <tr key={vistoria.id}>
-                                    <td>{vistoria.id}</td>
-                                    <td>{vistoria.data}</td>
-                                    <td>{vistoria.status}</td>
-                                    <td>{vistoria.resultado}</td>
+                            {
+                            diagnostico.map((historico) => (
+                                <tr key={historico.id}>
+                                    <td>{historico.id}</td>
+                                    <td>{historico.registroAvaria}</td>
+                                    <td>{historico.estadoGeral}</td>
+                                    <td>{historico.danos}</td>
+                                    <td>{historico.idSinistro}</td>
                                     <td>
                                         <button
                                             className="ver-diagnostico"
@@ -56,7 +54,8 @@ export default function Historico() {
                                         </button>
                                     </td>
                                 </tr>
-                            ))}
+                            ))
+                            }
                         </tbody>
                     </table>
                     <div className="button-container">
