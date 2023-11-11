@@ -2,13 +2,13 @@
   "cliente": [
     {
       "nome": "João",
-      "email": "joao@gmail.com",
-      "telefone": "11978451256",
-      "endereco": "avenida general",
-      "cpf": "124.563.785-32",
-      "anoNasc": "2004",
-      "senha": "12345",
+      "cpf": "125.959.589-10",
+      "endereco": "Avenida Doutor Renato de Andrade Maia, Parque Renato Maia, Guarulhos, SP, 07114000",
+      "telefone": "1199888151",
       "sexo": "Masculino",
+      "email": "joao@gmail.com",
+      "anoNasc": 2004,
+      "senha": "123456789",
       "id": 1
     }
   ],
