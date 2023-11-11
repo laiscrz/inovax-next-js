@@ -86,7 +86,7 @@
 
 .solic-vist,
 .feedback-conteiner,
-.configuracoes-conteiner, .acompanhar-vist {
+.configuracoes-conteiner, .acompanhar-vist, .histo-vist, .diagnostico {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -101,7 +101,7 @@
     }
 
     & form {
-        width: 700px;
+        width: 680px;
         margin: auto;
         text-align: center;
         margin-bottom: 20px;

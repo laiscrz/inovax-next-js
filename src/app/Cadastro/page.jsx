@@ -38,7 +38,6 @@ export default function Cadastro({params}) {
         
                 if (response.ok) {
                     console.log("Cliente adicionado com sucesso!");
-                    // Restante do código...
                 } else {
                     console.error("Falha ao adicionar cliente.");
                 }
