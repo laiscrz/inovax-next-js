@@ -27,7 +27,7 @@ export default function Configuracoes() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Realize a requisição PUT para atualizar os dados do cliente
+        
         try {
             const response = await fetch('http://localhost:5000/cliente', {
                 method: 'PUT',
@@ -38,7 +38,7 @@ export default function Configuracoes() {
             });
 
             if (response.ok) {
-                // Lógica de sucesso, por exemplo, redirecionar para outra página
+                
                 console.log('Dados do cliente atualizados com sucesso!');
             } else {
                 // Lógica de erro, por exemplo, exibir uma mensagem de erro

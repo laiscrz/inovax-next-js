@@ -8,10 +8,18 @@ export default function Login() {
     const [senha, setSenha] = useState('');
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(`Email: ${email}, Senha: ${senha}`);
-        setEmail('');
-        setSenha('');
+
+      event.preventDefault();
+    
+      if (email === 'admin@gmail.com' && senha === '12345') {
+        console.log('Login bem-sucedido!');
+        window.location.href = '/PortalCliente';
+      } else {
+        console.log('Credenciais inválidas. Tente novamente.');
+      }
+    
+      setEmail('');
+      setSenha('');
     }
 
     return (
@@ -47,11 +55,9 @@ export default function Login() {
               </div>
 
               <div className="container-login-form-btn">
-                <Link href={'/PortalCliente'}>
                   <span><button className="login-form-btn" type="submit">
                     Entrar
                   </button></span>
-                </Link>
               </div>
 
               <ul className="login-utils">
