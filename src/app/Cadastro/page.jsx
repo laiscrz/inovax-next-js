@@ -51,7 +51,7 @@ export default function Cadastro() {
         setClientes([...clientes, clienteComEnderecoFormatado]);
 
         try {
-            const response = await fetch("http://localhost:5000/cliente", {
+            const response = await fetch("http://localhost:8080/SprintJavaPorto/api/cliente", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(clienteComEnderecoFormatado),
@@ -158,7 +158,7 @@ export default function Cadastro() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="endereco">Endereço:</label><br />
+                            <label htmlFor="endereco">CEP:</label><br />
                             <input
                                 type="text"
                                 id="cep"

@@ -8,14 +8,14 @@ export default function Visualizar() {
     const [bike, setBike] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bike`)
+        fetch(`http://localhost:8080/SprintJavaPorto/api/bike`)
             .then(resp => resp.json())
             .then(resp => setBike(resp))
             .catch(error => console.error(error))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/bike/${id}`, {
+        fetch(`http://localhost:8080/SprintJavaPorto/api/bike/${id}`, {
             method: 'DELETE'
         })
             .then(window.location = '/')

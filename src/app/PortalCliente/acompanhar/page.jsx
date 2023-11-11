@@ -8,14 +8,14 @@ export default function Acompanhar() {
     const [inspencao, setInspencao] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inspencao`)
+        fetch(`http://localhost:8080/SprintJavaPorto/api/inspecao`)
             .then(resp => resp.json())
             .then(resp => setInspencao(resp))
             .catch(error => console.error(error))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/inspencao/${id}`, {
+        fetch(`http://localhost:8080/SprintJavaPorto/api/inspecao/${id}`, {
             method: 'DELETE'
         })
             .then(window.location = '/')

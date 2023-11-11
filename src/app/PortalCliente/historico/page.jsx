@@ -8,14 +8,14 @@ export default function Historico() {
     const [diagnostico, setDiagnostico] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/diagnostico`)
+        fetch(`http://localhost:8080/SprintJavaPorto/api/diagnostico`)
             .then(resp => resp.json())
             .then(resp => setDiagnostico(resp))
             .catch(error => console.error(error))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/diagnostico/${id}`, {
+        fetch(`http://localhost:8080/SprintJavaPorto/api/diagnostico/${id}`, {
             method: 'DELETE'
         })
             .then(window.location = '/')

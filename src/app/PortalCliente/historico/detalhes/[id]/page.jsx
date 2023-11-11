@@ -14,17 +14,17 @@ export default function Detalhes({ params }) {
 
     useEffect(() => {
         if (detalhesId) {
-            fetch(`http://localhost:5000/diagnostico/${detalhesId}`)
+            fetch(`http://localhost:8080/SprintJavaPorto/api/diagnostico/${detalhesId}`)
                 .then(resp => resp.json())
                 .then(resp => setDetalhes(resp))
                 .catch(error => console.error(error));
 
-            fetch(`http://localhost:5000/seguro`)
+            fetch(`http://localhost:8080/SprintJavaPorto/api/seguro`)
                 .then(resp => resp.json())
                 .then(resp => setSeguro(resp[0]))
                 .catch(error => console.error(error));
 
-            fetch(`http://localhost:5000/sinistro`)
+            fetch(`http://localhost:8080/SprintJavaPorto/api/sinistro`)
                 .then(resp => resp.json())
                 .then(resp => setSinistro(resp[0]))
                 .catch(error => console.error(error));

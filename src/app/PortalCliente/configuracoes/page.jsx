@@ -20,7 +20,7 @@ export default function Configuracoes() {
     const clienteId = 1;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cliente/${clienteId}`)
+        fetch(`http://localhost:8080/SprintJavaPorto/api/cliente/${clienteId}`)
             .then((response) => response.json())
             .then((data) => setFormData(data))
             .catch((error) => console.error('Erro na requisição GET:', error));
@@ -40,7 +40,7 @@ export default function Configuracoes() {
 
     const handleSave = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/cliente/${clienteId}`, {
+            const response = await fetch(`http://localhost:8080/SprintJavaPorto/api/cliente/${clienteId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

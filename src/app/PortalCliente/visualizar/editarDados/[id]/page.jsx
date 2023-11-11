@@ -23,7 +23,7 @@ export default function EditarDados({params}) {
 
     useEffect(()=>{
         if(visualizarId){
-            fetch(`http://localhost:5000/bike/${visualizarId}`)
+            fetch(`http://localhost:8080/SprintJavaPorto/api/bike/${visualizarId}`)
             .then(resp=> resp.json())
             .then(resp=> setNovo(resp))
             .catch(error=> console.error(error))
@@ -32,7 +32,7 @@ export default function EditarDados({params}) {
 
     const handleSubmit = e =>{
         e.preventDefault()
-        fetch(`http://localhost:5000/bike/${visualizarId}`,{
+        fetch(`http://localhost:8080/SprintJavaPorto/api/bike/${visualizarId}`,{
             method: 'PUT',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(novo)
