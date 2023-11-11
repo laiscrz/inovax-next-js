@@ -1,9 +1,8 @@
 "use client"
 import Next, { useState } from 'react';
 import '/src/app/Cadastro/cadastro.css';
-export default function Cadastro({params}) {
 
-
+export default function Cadastro() {
 
         const [clientes, setClientes] = useState([]);
         const [cliente, setCliente] = useState({
