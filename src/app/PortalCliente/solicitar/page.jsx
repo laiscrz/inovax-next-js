@@ -22,7 +22,7 @@ export default function Solicitar() {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/bike", {
+            const response = await fetch("http://localhost:8080/07-WebApi/api/bike", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formSolicToSend),

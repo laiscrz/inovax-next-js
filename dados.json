@@ -6,7 +6,7 @@
       "telefone": "11978451256",
       "endereco": "avenida general",
       "cpf": "124.563.785-32",
-      "anoNasc": 2023,
+      "anoNasc": "2004",
       "senha": "12345",
       "sexo": "Masculino",
       "id": 1
@@ -34,7 +34,6 @@
       "modelo": "road",
       "id": 3
     }
-        
   ],
   "seguro": [
     {

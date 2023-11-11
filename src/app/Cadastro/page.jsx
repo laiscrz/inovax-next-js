@@ -29,7 +29,7 @@ export default function Cadastro() {
             setClientes([...clientes, cliente]);
         
             try {
-                const response = await fetch("http://localhost:8080/SprintJavaPorto/api/cliente/", {
+                const response = await fetch("http://localhost:8080/07-WebApi/api/cliente", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(cliente),

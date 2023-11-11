@@ -1,10 +1,9 @@
 "use client"
-import { useState } from 'react';
 import '/src/app/PortalCliente/portalcliente.css'
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Configuracoes() {
-
     const [formData, setFormData] = useState({
         nome: '',
         cpf: '',
@@ -16,6 +15,17 @@ export default function Configuracoes() {
         senha: '',
     });
 
+    const [isEditMode, setIsEditMode] = useState(false);
+
+    const clienteId = 1;
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/cliente/${clienteId}`)
+            .then((response) => response.json())
+            .then((data) => setFormData(data))
+            .catch((error) => console.error('Erro na requisição GET:', error));
+    }, [clienteId]);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -24,12 +34,13 @@ export default function Configuracoes() {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleEdit = () => {
+        setIsEditMode(true);
+    };
 
-        
+    const handleSave = async () => {
         try {
-            const response = await fetch('http://localhost:5000/cliente', {
+            const response = await fetch(`http://localhost:5000/cliente/${clienteId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,10 +49,9 @@ export default function Configuracoes() {
             });
 
             if (response.ok) {
-                
                 console.log('Dados do cliente atualizados com sucesso!');
+                setIsEditMode(false);
             } else {
-                // Lógica de erro, por exemplo, exibir uma mensagem de erro
                 console.error('Falha ao atualizar os dados do cliente');
             }
         } catch (error) {
@@ -56,7 +66,7 @@ export default function Configuracoes() {
                 <div className='configuracoes-conteiner'>
                     <h2>Configurações da Conta</h2>
                     <div className="form-cadastro">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={(e) => e.preventDefault()}>
                             <div className="form-group">
                                 <label htmlFor="nome">Nome Completo:</label><br />
                                 <input
@@ -151,7 +161,13 @@ export default function Configuracoes() {
                                         Voltar para o Menu
                                     </button>
                                 </Link>
-                                <button type="submit">Alterar</button>
+                                {isEditMode ? (
+                                    <>
+                                        <button onClick={handleSave}>Salvar</button>
+                                    </>
+                                ) : (
+                                    <button onClick={handleEdit}>Alterar</button>
+                                )}
                             </div>
                         </form>
                     </div>
