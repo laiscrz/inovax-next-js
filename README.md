@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚴🏻 Inova-X: Site de Vistoria de Bikes Online
 
-## Getting Started
+Bem-vindo ao repositório de desenvolvimento do site de vistoria de bikes online da empresa Inova-X. Este projeto faz parte do Challenge da Porto Seguro, que foi entregue na sprint 4 do curso de ADS da Faculdade FIAP. O objetivo do sistema no geral é automatizar o processo de vistoria de bicicletas, utilizando tecnologias avançadas de reconhecimento de imagem para identificar avarias sem a necessidade de intervenção humana, o presente projeto representa o site do projeto.
 
-First, run the development server:
+## Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O sistema Inova-X visa transformar a maneira como as bicicletas são inspecionadas e avaliadas, tornando o processo mais rápido, eficiente e preciso. O foco principal é a utilização de algoritmos de reconhecimento de imagem para identificar e classificar avarias nas bicicletas, garantindo a qualidade e segurança do processo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias utilizadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* **Next.js:** Framework para construção do frontend utilizando CSS e JSX.
+* **Java com Eclipse:** Linguagem de programação para o backend.
+* **Banco Oracle:** Sistema de gerenciamento de banco de dados utilizado para armazenar dados relacionados às vistorias de bicicletas.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalando as Dependências
+* Dentro do diretório do projeto, execute os seguintes comandos para instalar as dependências:
+   ```bash
+   npm install
+   ```
+## Opções
+* Se desejar testar com o dados.json, que é um exemplo das APIs RESTful geradas em nosso Java:
+   ```bash
+   npm install --save -g -D json-server
+   ```
+* Altere o caminho para `http://localhost:5000/nome da tabela` e execute com:
+    ```bash
+   npm run backend
+   ```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Executando o Projeto
+* Para executar o projeto, utilize o seguinte comando:
+   ```bash
+   npm run dev
+   ```
