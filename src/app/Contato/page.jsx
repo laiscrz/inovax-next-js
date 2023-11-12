@@ -1,6 +1,6 @@
 "use client"
 import Next, { useState } from 'react';
-import '/src/app/Contato/contato.css';
+import '../Contato/contato.css';
 export default function Contato() {
     const [formData, setFormData] = useState({
       nome: '',

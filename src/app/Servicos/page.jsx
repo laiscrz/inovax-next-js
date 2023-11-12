@@ -1,4 +1,4 @@
-import '/src/app/Servicos/servicos.css'
+import '../Servicos/servicos.css'
 import Image from "next/image";
 
 

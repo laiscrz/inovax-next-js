@@ -1,5 +1,5 @@
 "use client"
-import '/src/app/Cadastro/cadastro.css';
+import '../Cadastro/cadastro.css';
 
 import React, { useState } from 'react';
 

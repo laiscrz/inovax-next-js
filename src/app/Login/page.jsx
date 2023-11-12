@@ -1,5 +1,5 @@
 "use client"
-import '/src/app/Login/login.css'
+import '../Login/login.css'
 import Link from "next/link";
 import { useState } from "react";
 

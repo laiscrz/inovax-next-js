@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/app/PortalCliente/portalcliente.css';
+import '../PortalCliente/portalcliente.css';
 import Link from 'next/link';
 
 const MenuOption = ({ texto, imagemSrc, caminho }) => (

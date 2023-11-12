@@ -1,5 +1,5 @@
 import Link from "next/link";
-import '/src/app/PortalCliente/portalcliente.css'
+import '../../PortalCliente/portalcliente.css'
 
 
 
