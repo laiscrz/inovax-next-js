@@ -70,20 +70,24 @@ export default function Cadastro() {
 
     const buscarCep = (e) => {
         const cep = e.target.value.replace(/\D/g, '');
-
+    
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then((res) => res.json())
             .then((data) => {
-                setCliente({
-                    ...cliente,
-                    endereco: `${data.logradouro || ''}, ${data.bairro || ''}, ${data.localidade || ''}, ${data.uf || ''}, ${cep}`,
-                });
+                const enderecoFinal = `${data.logradouro || ''}, ${data.bairro || ''}, ${data.localidade || ''}, ${data.uf || ''}, ${cep}`;
+    
+                setCliente((prevCliente) => ({
+                    ...prevCliente,
+                    endereco: enderecoFinal,
+                }));
             })
             .catch((error) => {
                 console.error("Erro ao buscar CEP:", error);
             });
     };
-
+    
+    
+    
     return (
         <main className="cadastro">
             <div className="cadastro-conteiner">
