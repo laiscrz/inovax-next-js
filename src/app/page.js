@@ -18,7 +18,7 @@ export default function Home() {
               <h2>Online Aqui!</h2>
             </div>
             <div className="btn-saibamais">
-              <Link href={'/comofunciona'}>
+              <Link href={'/ComoFunciona'}>
                 <span><button>Saiba Mais</button></span>
               </Link>
             </div>

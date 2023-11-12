@@ -85,7 +85,7 @@ export default function EditarDados({ params }) {
                             />
                         </div>
                         <div className="button-container">
-                            <Link href={'/portalcliente/visualizar'}>
+                            <Link href={'/PortalCliente/visualizar'}>
                                 <button className="button-voltar-menu" >
                                     Voltar para anterior
                                 </button>

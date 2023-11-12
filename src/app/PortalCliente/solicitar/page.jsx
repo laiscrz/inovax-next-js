@@ -127,7 +127,7 @@ export default function Solicitar() {
                             <p>Por favor, envie imagens ou vídeos da bicicleta a partir de diferentes ângulos <br /> para uma melhor visualização.</p>
                         </div><br />
                         <div className="button-container">
-                            <Link href={'/portalcliente'}>
+                            <Link href={'/PortalCliente'}>
                                 <button className="button-voltar-menu" >
                                     Voltar para o Menu
                                 </button>

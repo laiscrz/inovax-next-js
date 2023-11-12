@@ -58,7 +58,7 @@ export default function Visualizar() {
                                         <td>{visualizar.cor}</td>
                                         <td>{visualizar.modelo}</td>
                                         <td>
-                                        <Link href="/portalcliente/visualizar/editardados/[numSerie]" as={`/portalcliente/visualizar/editardados/${visualizar.numSerie}`}>
+                                        <Link href="/PortalCliente/visualizar/editarDados/[numSerie]" as={`/PortalCliente/visualizar/editarDados/${visualizar.numSerie}`}>
                                                 <button className="ver-detalhes">
                                                     <FaEdit /> Editar Modelo
                                                 </button>
@@ -73,7 +73,7 @@ export default function Visualizar() {
                         </tbody>
                     </table>
                     <div className="button-container">
-                        <Link href={'/portalcliente'}>
+                        <Link href={'/PortalCliente'}>
                             <button className="button-voltar-menu" >
                                 Voltar para o Menu
                             </button>

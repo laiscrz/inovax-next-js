@@ -61,7 +61,7 @@ export default function AlterarDados({ params }) {
             })
             .then(data => {
                 console.log('Dados atualizados:', data);
-                window.location.href = '/portalcliente/configuracoes';
+                window.location.href = '/PortalCliente/configuracoes';
             })
             .catch(error => {
                 console.error(error);
@@ -89,7 +89,7 @@ export default function AlterarDados({ params }) {
                             />
                         </div>
                         <div className="button-container">
-                            <Link href={'/portalcliente/configuracoes'}>
+                            <Link href={'/PortalCliente/configuracoes'}>
                                 <button className="button-voltar-menu" >
                                     Voltar para anterior
                                 </button>

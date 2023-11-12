@@ -71,7 +71,7 @@ export default function Configuracoes() {
                                     <td>{configuracoes.anoNasc}</td>
                                     <td>{configuracoes.senha}</td>
                                     <td>
-                                        <Link href="/portalcliente/configuracoes/alterardados/[cpf]" as={`/portalcliente/configuracoes/alterardados/${configuracoes.cpf}`}>
+                                        <Link href="/PortalCliente/configuracoes/alterarDados/[cpf]" as={`/PortalCliente/configuracoes/alterarDados/${configuracoes.cpf}`}>
                                             <button className="ver-detalhes">
                                                 <FaEdit /> Editar Endereço
                                             </button>
@@ -85,7 +85,7 @@ export default function Configuracoes() {
                         </tbody>
                     </table>
                     <div className="button-container">
-                        <Link href={'/portalcliente'}>
+                        <Link href={'/PortalCliente'}>
                             <button className="button-voltar-menu">
                                 Voltar para o Menu
                             </button>

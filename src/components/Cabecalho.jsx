@@ -9,14 +9,14 @@ export default function Cabecalho() {
             <nav className="nav-menu">
                 <div className='navegacao-links'>
                     <Link href={'/'}>Home</Link>
-                    <Link href={'/comofunciona'}>Como Funciona</Link>
-                    <Link href={'/servicos'}>Serviços</Link>
-                    <Link href={'/sobrenos'}>Sobre Nós</Link>
-                    <Link href={'/contato'}>Contato</Link>
+                    <Link href={'/ComoFunciona'}>Como Funciona</Link>
+                    <Link href={'/Servicos'}>Serviços</Link>
+                    <Link href={'/SobreNos'}>Sobre Nós</Link>
+                    <Link href={'/Contato'}>Contato</Link>
 
                 </div>
                 <div className="acessar-login">
-                    <Link href={'/login'}>
+                    <Link href={'/Login'}>
                         <button id="btnLogin">
                             <span><Image src={'/Image/profile_icon.png'} alt="Profile Icon" width={'30'} height={'30'} />Login</span>
                         </button>
