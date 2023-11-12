@@ -26,6 +26,9 @@ export default function Visualizar() {
                     return response.json();
                 })
                 .catch(error => console.error(error))
+                .finally(() => {
+                    window.location.reload();
+                });
         } else {
             console.error('numSerie indefinido. Não é possível excluir.');
         }

@@ -1,6 +1,6 @@
 /* Estilo para o conteúdo do PortalCliente */
 .portalclie-conteiner {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #202020;
@@ -87,7 +87,7 @@
 .solic-vist,
 .feedback-conteiner,
 .configuracoes-conteiner, .acompanhar-vist, .histo-vist, .diagnostico {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
@@ -158,8 +158,8 @@
 }
 
 .acompanhar-vist,
-.histo-vist {
-    max-width: 800px;
+.histo-vist,.configuracoes-conteiner {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;

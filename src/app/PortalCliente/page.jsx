@@ -35,7 +35,7 @@ export default function PortalCliente() {
             caminho: '/PortalCliente/visualizar'
         },
         {
-            texto: "Configurações e Dados da Conta",
+            texto: "Configurações e Dados das Contas Conectadas",
             imagemSrc: "/image/icon_config.png",
             caminho: '/PortalCliente/configuracoes'
         },
