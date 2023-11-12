@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import '/src/app/PortalCliente/portalcliente.css'
+import '../portalcliente.css'
 import { useEffect, useState } from "react";
 import { FaTimesCircle, FaEdit } from "react-icons/fa"
 

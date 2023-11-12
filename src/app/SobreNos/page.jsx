@@ -1,5 +1,6 @@
 import Image from "next/image";
-import '../SobreNos/sobrenos.css'
+import './sobrenos.css';
+
 
 const sections = [
   {

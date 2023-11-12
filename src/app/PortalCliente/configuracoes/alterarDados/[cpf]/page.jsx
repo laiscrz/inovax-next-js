@@ -1,5 +1,5 @@
 "use client"
-import '../../../../PortalCliente/portalcliente.css'
+import '../../../portalcliente.css'
 import Link from "next/link";
 import { useEffect, useState } from "react"
 

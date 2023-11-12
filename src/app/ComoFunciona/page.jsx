@@ -1,5 +1,5 @@
 import Image from "next/image";
-import '../ComoFunciona/comofuncionar.css' 
+import './comofuncionar.css' 
 
 const sections = [
     { title: 'Descrição', content: 'Inova-x desenvolveu uma solução digital de vistoria de bicicletas online que visa proporcionar aos usuários uma maneira rápida e eficiente de avaliar suas bicicletas sem a necessidade de intervenção humana. O sistema utiliza tecnologias de reconhecimento de imagem e vídeo para identificar possíveis danos e fraudes.' },

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import '../../PortalCliente/portalcliente.css'
+import '../portalcliente.css'
 
 export default function Solicitar() {
     const [formSolic, setFormSolic] = useState({

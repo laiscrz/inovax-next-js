@@ -1,4 +1,4 @@
-import '../Integrantes/integrantes.css';
+import './integrantes.css';
 
 export default function Integrantes() {
     return (
