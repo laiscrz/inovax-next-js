@@ -13,7 +13,7 @@ export default function Login() {
     
       if (email === 'admin@gmail.com' && senha === '12345') {
         console.log('Login bem-sucedido!');
-        window.location.href = '/PortalCliente';
+        window.location.href = '/portalcliente';
       } else {
         console.log('Credenciais inválidas. Tente novamente.');
       }
@@ -66,7 +66,7 @@ export default function Login() {
                     Não tem uma conta?
                   </span>
 
-                  <Link href={'/Cadastro'} className="text2">
+                  <Link href={'/cadastro'} className="text2">
                      Cadastre-se
                   </Link>
                 </li>

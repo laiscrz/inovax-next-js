@@ -6,7 +6,7 @@ export default function Rodape(){
         <footer className = 'footer-conteiner'>
             <p className="text-center">&copy; 2023 Inova-X. Todos os direitos reservados.</p>
             <div className = 'selec-integrant'>
-                <Link href = {'/Integrantes'}>Integrantes</Link>
+                <Link href = {'/integrantes'}>Integrantes</Link>
             </div>
         </footer>
     )

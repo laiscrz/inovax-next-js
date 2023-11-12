@@ -17,37 +17,37 @@ export default function PortalCliente() {
         {
             texto: "Solicitar Nova Vistoria",
             imagemSrc: "/Image/icon_solic.png",
-            caminho: '/PortalCliente/solicitar'
+            caminho: '/portalcliente/solicitar'
         },
         {
             texto: "Acompanhar Vistorias em Andamento",
             imagemSrc: "/Image/icon_acompa.png",
-            caminho: '/PortalCliente/acompanhar'
+            caminho: '/portalcliente/acompanhar'
         },
         {
             texto: "Ver Histórico de Vistorias de Bicicletas",
             imagemSrc: "/image/icon_hist.png",
-            caminho: '/PortalCliente/historico'
+            caminho: '/portalcliente/historico'
         },
         {
             texto: "Visualizar Bicicletas Cadastradas",
             imagemSrc: "/Image/icon_visualizarbike.png",
-            caminho: '/PortalCliente/visualizar'
+            caminho: '/portalcliente/visualizar'
         },
         {
             texto: "Configurações e Dados das Contas Conectadas",
             imagemSrc: "/image/icon_config.png",
-            caminho: '/PortalCliente/configuracoes'
+            caminho: '/portalcliente/configuracoes'
         },
         {
             texto: "Suporte ao Cliente",
             imagemSrc: "/image/icon_suporte.jpg",
-            caminho: '/PortalCliente/suporte'
+            caminho: '/portalcliente/suporte'
         },
         {
             texto: "FAQ (Perguntas Frequentes)",
             imagemSrc: "/image/icon_faq.jpg",
-            caminho: '/PortalCliente/faq'
+            caminho: '/portalcliente/faq'
         },
         {
             texto: "Sair da Conta",

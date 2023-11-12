@@ -35,7 +35,7 @@ export default function Faq() {
                         ))}
                     </ul>
                     <div className="button-container">
-                        <Link href={'/PortalCliente'}>
+                        <Link href={'/portalcliente'}>
                             <button className="button-voltar-menu" >
                                 Voltar para o Menu
                             </button>

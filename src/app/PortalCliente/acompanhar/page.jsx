@@ -67,7 +67,7 @@ export default function Acompanhar() {
                             </tbody>
                         </table>
                         <div className="button-container">
-                            <Link href={'/PortalCliente'}>
+                            <Link href={'/portalcliente'}>
                                 <button className="button-voltar-menu" >
                                     Voltar para o Menu
                                 </button>
