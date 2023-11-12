@@ -14,12 +14,21 @@ export default function Visualizar() {
             .catch(error => console.error(error))
     }, [])
 
-    const handleDelete = (id) => {
-        fetch(`http://localhost:8080/SprintJavaPorto/api/bike/${id}`, {
-            method: 'DELETE'
-        })
-            .then(window.location = '/')
-            .catch(error => console.error(error))
+
+
+    const handleDelete = (numSerie) => {
+        if (numSerie) {
+            fetch(`http://localhost:8080/SprintJavaPorto/api/bike/${numSerie}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    console.log('Resposta do servidor:', response);
+                    return response.json();
+                })
+                .catch(error => console.error(error))
+        } else {
+            console.error('numSerie indefinido. Não é possível excluir.');
+        }
     }
 
     return (
@@ -39,19 +48,19 @@ export default function Visualizar() {
                         </thead>
                         <tbody>
                             {
-                                bike.map((visualizar) => (
-                                    <tr key={visualizar.id}>
+                                bike.map((visualizar, index) => (
+                                    <tr key={`${visualizar.id}-${index}`}>
                                         <td>{visualizar.numSerie}</td>
                                         <td>{visualizar.anoCompra}</td>
                                         <td>{visualizar.cor}</td>
                                         <td>{visualizar.modelo}</td>
                                         <td>
-                                            <Link href={`/PortalCliente/visualizar/editarDados/${visualizar.id}`}>
+                                        <Link href="/PortalCliente/visualizar/editarDados/[numSerie]" as={`/PortalCliente/visualizar/editarDados/${visualizar.numSerie}`}>
                                                 <button className="ver-detalhes">
-                                                    <FaEdit /> Editar
+                                                    <FaEdit /> Editar Modelo
                                                 </button>
                                             </Link>
-                                            <button onClick={handleDelete.bind(this, visualizar.id)} className="ver-detalhes">
+                                            <button onClick={handleDelete.bind(this, visualizar.numSerie)} className="ver-detalhes">
                                                 <FaTimesCircle /> Exluir
                                             </button>
                                         </td>
