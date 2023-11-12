@@ -11,21 +11,22 @@ O sistema Inova-X visa transformar a maneira como as bicicletas são inspecionad
 * **Next.js:** Framework para construção do frontend utilizando CSS e JSX.
 * **Java com Eclipse:** Linguagem de programação para o backend.
 * **Banco Oracle:** Sistema de gerenciamento de banco de dados utilizado para armazenar dados relacionados às vistorias de bicicletas.
+* **Consumo de API ViaCep:** Para identificar o endereço através do CEP do nosso cliente.
 
 ## Instalando as Dependências
 * Dentro do diretório do projeto, execute os seguintes comandos para instalar as dependências:
    ```bash
    npm install
    ```
-## Opções
-* Se desejar testar com o dados.json, que é um exemplo das APIs RESTful geradas em nosso Java:
-   ```bash
-   npm install --save -g -D json-server
-   ```
-* Altere o caminho para `http://localhost:5000/nome da tabela` e execute com:
-    ```bash
-   npm run backend
-   ```
+
+## Detalhes de Acesso
+Para testes, utilize as seguintes credenciais:
+
+**E-mail:** admin@gmail.com
+**Senha:** 12345
+
+## Observações
+* O arquivo dados.json, que é um exemplo das APIs RESTful geradas em nosso Java.
 
 ## Executando o Projeto
 * Para executar o projeto, utilize o seguinte comando:
