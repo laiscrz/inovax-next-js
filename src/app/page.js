@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import '/src/app/pagehome.css'
-import Carrossel from '@/components/Carrossel'
+import './pagehome.css'
+import Carrossel from '../components/Carrossel'
 
 export default function Home() {
   const images = [
