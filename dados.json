@@ -40,7 +40,7 @@
       "id": 1,
       "codigoSeguro": "S4598",
       "dataContratacao": "12-10-2023",
-      "clasulas": "clausula 10",
+      "clausulas": "clausula 10",
       "pagamento": "boleto",
       "valorSeguro": 100.5,
       "numSerie": "XC1568"
